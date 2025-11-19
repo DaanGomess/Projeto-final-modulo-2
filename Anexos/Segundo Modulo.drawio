@@ -1,0 +1,62 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.0.3">
+  <diagram name="Página-1" id="95uztlnMcFjWguvewN8B">
+    <mxGraphModel dx="1426" dy="751" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2zRTDsjdzrf-YrMo8PU2-1" value="" style="image;points=[];aspect=fixed;html=1;align=center;shadow=0;dashed=0;image=img/lib/allied_telesis/computer_and_terminals/Personal_Computer_with_Server.svg;" vertex="1" parent="1">
+          <mxGeometry x="382" y="80" width="62.400000000000006" height="62.400000000000006" as="geometry" />
+        </mxCell>
+        <mxCell id="2zRTDsjdzrf-YrMo8PU2-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="414" y="142.4" as="sourcePoint" />
+            <mxPoint x="414" y="212.4" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2zRTDsjdzrf-YrMo8PU2-4" value="&lt;div&gt;Attacker (Kali)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&amp;nbsp; curl / browser / nmap&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="30" width="126.8" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2zRTDsjdzrf-YrMo8PU2-5" value="1. Envia ataque SQLi/XSS" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="160" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2zRTDsjdzrf-YrMo8PU2-7" value="WAF (ModSecurity CRS)&#xa;- Nginx + CRS 4.2 + Anomaly&#xa;- Detecta SQLi&#xa;- Detecta XSS&#xa;- Gera 403 ou 302" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="344" y="220" width="140" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="2zRTDsjdzrf-YrMo8PU2-8" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="414" y="330" as="sourcePoint" />
+            <mxPoint x="414" y="400" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="414" y="360" />
+              <mxPoint x="414" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2zRTDsjdzrf-YrMo8PU2-9" value="2. Filtra/Bloca" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="340" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="2zRTDsjdzrf-YrMo8PU2-10" value="&lt;div&gt;&amp;nbsp; DVWA App&lt;/div&gt;&lt;div&gt;- Apache/PHP&lt;/div&gt;&lt;div&gt;- Vulnerável (int.)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="344" y="410" width="133.2" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="2zRTDsjdzrf-YrMo8PU2-11" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="414" y="490" as="sourcePoint" />
+            <mxPoint x="414" y="560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="414" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="2zRTDsjdzrf-YrMo8PU2-12" value="3. Resposta (bloqueada pelo WAF)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="490" width="120" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="2zRTDsjdzrf-YrMo8PU2-13" value="Dozzle Log Viewer (Docker logs)&#xa;- Lê logs JSON do ModSecurity&#xa;- Exibe detalhes da regra&#xa;- Mostra unique_id, ruleId, payload" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="570" width="136" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="2zRTDsjdzrf-YrMo8PU2-14" value="&lt;div&gt;Docker Network (labs_labnet35)&lt;/div&gt;&lt;div&gt;- Isola WAF, DVWA, Dozzle&lt;/div&gt;&lt;div&gt;- O Kali acessa via rede bridge&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="530" y="690" width="200" height="85" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
